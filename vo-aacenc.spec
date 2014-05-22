@@ -4,7 +4,7 @@
 
 Name:		vo-aacenc
 Version:	0.1.2
-Release:	%mkrel 1
+Release:	1
 Summary:	VisualOn AAC encoder library
 License:	ASL 2.0
 Group:		System/Libraries
@@ -50,37 +50,17 @@ Header files and development libraries for %{name}
 %make
 
 %install
-%__rm -rf %{buildroot}
 %makeinstall_std
 
-%__rm -rf %{buildroot}%{_libdir}/lib%{name}.la
-
-%clean
-%__rm -rf %{buildroot}
 
 %files -n %{libname}
 %doc AUTHORS COPYING ChangeLog NOTICE README
 %{_libdir}/lib%{name}.so.%{major}*
 
 %files -n %{develname}
+%doc AUTHORS COPYING ChangeLog NOTICE README
 %{_includedir}/%{name}
 %{_libdir}/lib%{name}.so
 %{_libdir}/pkgconfig/%{name}.pc
 
-
-%changelog
-* Thu May 17 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 0.1.2-1
-- New version 1.2
-- Add docs
-- Don't package .a & .la files
-- Change tainted to restricted in description
-
-* Thu May 26 2011 cjw <cjw> 0.1.1-2.mga1.tainted
-+ Revision: 100421
-- add library dependency on devel package
-
-* Tue May 10 2011 cjw <cjw> 0.1.1-1.mga1
-+ Revision: 96794
-- add 'tainted' notice
-- imported package vo-aacenc
 
