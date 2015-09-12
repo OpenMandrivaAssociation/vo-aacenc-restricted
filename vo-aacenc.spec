@@ -4,7 +4,7 @@
 
 Name:		vo-aacenc
 Version:	0.1.2
-Release:	2
+Release:	3
 Summary:	VisualOn AAC encoder library
 License:	ASL 2.0
 Group:		System/Libraries
