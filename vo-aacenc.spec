@@ -3,8 +3,8 @@
 %define develname	%mklibname %{name} -d
 
 Name:		vo-aacenc
-Version:	0.1.2
-Release:	3
+Version:	0.1.3
+Release:	1
 Summary:	VisualOn AAC encoder library
 License:	ASL 2.0
 Group:		System/Libraries
@@ -43,15 +43,14 @@ Requires:	%{libname} = %{version}-%{release}
 Header files and development libraries for %{name}
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-%configure2_5x --disable-static
-%make
+%configure --disable-static
+%make_build
 
 %install
-%__rm -rf %{buildroot}
-%makeinstall_std
+%make_install
 
 %__rm -rf %{buildroot}%{_libdir}/lib%{name}.la
 
