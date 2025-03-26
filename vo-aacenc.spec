@@ -58,7 +58,7 @@ Header files and development libraries for %{name}
 %__rm -rf %{buildroot}
 
 %files -n %{libname}
-%doc AUTHORS COPYING ChangeLog NOTICE README
+%doc COPYING ChangeLog NOTICE README
 %{_libdir}/lib%{name}.so.%{major}*
 
 %files -n %{develname}
