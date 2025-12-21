@@ -11,6 +11,11 @@ Group:		System/Libraries
 URL:		https://opencore-amr.sourceforge.net/
 Source0:	http://sourceforge.net/projects/opencore-amr/files/%{name}/%{name}-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 This library contains an encoder implementation of the Advanced Audio
 Coding (AAC) audio codec. The library is based on a codec implementation
